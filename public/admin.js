@@ -28,7 +28,7 @@ function showTab(tabId) {
   event.target.classList.add("active");
 }
 function loadProfessionals() {
-  fetch("http://localhost:3000/professionals")
+  fetch("http://localhost:10000/professionals")
     .then((res) => res.json())
     .then((data) => {
       const tbody = document.querySelector("#professionalsTable tbody");
@@ -60,7 +60,7 @@ function loadProfessionals() {
     .catch((error) => console.error("Error loading professionals:", error));
 }
 function loadCustomers() {
-  fetch("http://localhost:3000/customers")
+  fetch("http://localhost:10000/customers")
     .then((res) => res.json())
     .then((data) => {
       const tbody = document.querySelector("#customersTable tbody");
@@ -82,8 +82,8 @@ function loadCustomers() {
 
 function loadBookings() {
   Promise.all([
-    fetch("http://localhost:3000/bookings").then((res) => res.json()),
-    fetch("http://localhost:3000/professionals").then((res) => res.json()),
+    fetch("http://localhost:10000/bookings").then((res) => res.json()),
+    fetch("http://localhost:10000/professionals").then((res) => res.json()),
   ])
     .then(([bookings, professionals]) => {
       const tbody = document.querySelector("#bookingsTable tbody");
@@ -116,14 +116,14 @@ function loadBookings() {
     .catch((error) => console.error("Error loading bookings:", error));
 }
 function approvePro(id) {
-  fetch(`http://localhost:3000/professionals/${id}`)
+  fetch(`http://localhost:10000/professionals/${id}`)
     .then((res) => res.json())
     .then((professional) => {
       if (professional.approved) {
         alert("This professional is already approved.");
       } else {
         if (confirm("Are you sure you want to approve this professional?")) {
-          fetch(`http://localhost:3000/professionals/${id}`, {
+          fetch(`http://localhost:10000/professionals/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ approved: true }),
@@ -149,7 +149,7 @@ function deletePro(id) {
       "Are you sure you want to delete this professional? This action cannot be undone."
     )
   ) {
-    fetch(`http://localhost:3000/professionals/${id}`, {
+    fetch(`http://localhost:10000/professionals/${id}`, {
       method: "DELETE",
     })
       .then(() => {
