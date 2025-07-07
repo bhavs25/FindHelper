@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  fetch(`http://localhost:3000/professionals/${professionalId}`)
+  fetch(`http://localhost:10000/professionals/${professionalId}`)
     .then((response) => response.json())
     .then((professional) => {
       localStorage.setItem(
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
               status: "pending",
             };
 
-            fetch("http://localhost:3000/bookings", {
+            fetch("http://localhost:10000/bookings", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
