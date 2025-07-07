@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupModals();
 
-  fetch("http://localhost:3000/professionals")
+  fetch("http://localhost:10000/professionals")
     .then((response) => response.json())
     .then((data) => {
       localStorage.setItem("professionals", JSON.stringify(data));
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadCustomerProfile() {
-  fetch(`http://localhost:3000/customers?email=${user.email}`)
+  fetch(`http://localhost:10000/customers?email=${user.email}`)
     .then((res) => res.json())
     .then((customers) => {
       if (customers.length > 0) {
@@ -197,7 +197,7 @@ function setupModals() {
 }
 
 function openBookingsModal() {
-  fetch(`http://localhost:3000/bookings?customerEmail=${user.email}`)
+  fetch(`http://localhost:10000/bookings?customerEmail=${user.email}`)
     .then((res) => res.json())
     .then((bookings) => {
       const tbody = document.getElementById("bookingHistoryBody");
@@ -211,7 +211,7 @@ function openBookingsModal() {
 
       const professionalPromises = bookings.map((booking) => {
         return fetch(
-          `http://localhost:3000/professionals/${booking.professionalId}`
+          `http://localhost:10000/professionals/${booking.professionalId}`
         )
           .then((res) => res.json())
           .then((professional) => {
@@ -253,7 +253,7 @@ function updateProfile() {
   const location = document.getElementById("editLocation").value;
 
   // Update customer data
-  fetch(`http://localhost:3000/customers?email=${user.email}`)
+  fetch(`http://localhost:10000/customers?email=${user.email}`)
     .then((res) => res.json())
     .then((customers) => {
       if (customers.length > 0) {
@@ -273,7 +273,7 @@ function updateProfile() {
     })
     .then(() => {
       // Update user data
-      return fetch(`http://localhost:3000/users/${user.id}`, {
+      return fetch(`http://localhost:10000/users/${user.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -304,7 +304,7 @@ function loadCompletedBookings() {
   tbody.innerHTML = `<tr><td colspan="4">Loading...</td></tr>`;
 
   fetch(
-    `http://localhost:3000/bookings?customerEmail=${encodeURIComponent(
+    `http://localhost:10000/bookings?customerEmail=${encodeURIComponent(
       user.email
     )}&status=completed`
   )
@@ -368,7 +368,7 @@ function submitReview(bookingId) {
     return;
   }
 
-  fetch(`http://localhost:3000/bookings/${bookingId}`, {
+  fetch(`http://localhost:10000/bookings/${bookingId}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ review: reviewText }),
