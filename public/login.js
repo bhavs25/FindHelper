@@ -4,7 +4,7 @@ function login(event) {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  fetch(`http://localhost:3000/users?email=${email}&password=${password}`)
+  fetch(`http://localhost:10000/users?email=${email}&password=${password}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.length > 0) {
