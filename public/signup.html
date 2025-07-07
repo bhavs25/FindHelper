@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Helpers | Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <i class="fas fa-hands-helping"></i>FindHelpers
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="register-container">
+        <h1 class="register-title">Create an Account</h1>
+        <p class="register-subtitle">
+          Join thousands of customers and professionals
+        </p>
+        <form class="register-form" id="registerForm">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                required
+                placeholder="Enter your first name"
+              />
+              <div class="error" id="firstNameError">
+                Please enter your first name
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                required
+                placeholder="Enter your last name"
+              />
+              <div class="error" id="lastNameError">
+                Please enter your last name
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+            />
+            <div class="error" id="emailError">Please enter a valid email</div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                required
+                minlength="8"
+                placeholder="Create a password"
+              />
+              <div class="error" id="passwordError">
+                Password must be at least 8 characters
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                required
+                placeholder="Confirm your password"
+              />
+              <div class="error" id="confirmPasswordError">
+                Passwords don't match
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              required
+              placeholder="Enter your phone number"
+            />
+            <div class="error" id="phoneError">
+              Please enter a valid phone number
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="location">Location</label>
+            <select id="location" required>
+              <option value="" selected>Select your state</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Ladakh">Ladakh</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Puducherry">Puducherry</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="address">Full Address</label>
+            <input
+              type="text"
+              id="addres"
+              required
+              placeholder="Enter your address" required
+            />
+          </div>
+
+          <div class="role-selection">
+            <label>I want to register as:</label>
+            <div class="role-options">
+              <div class="role-option" id="customerRole">
+                <i class="fas fa-user"></i>
+                <p>Customer</p>
+                <input
+                  type="radio"
+                  name="role"
+                  id="role1"
+                  value="customer"
+                  checked
+                />
+              </div>
+              <div class="role-option" id="professionalRole">
+                <i class="fas fa-tools"></i>
+                <p>Professional</p>
+                <input
+                  type="radio"
+                  name="role"
+                  id="role2"
+                  value="professional"
+                />
+              </div>
+              <div class="role-option" id="adminRole">
+                <i class="fas fa-user-shield"></i>
+                <p>Admin</p>
+                <input type="radio" name="role" id="role3" value="admin" />
+              </div>
+            </div>
+          </div>
+
+          <div id="professionSelection" style="display: none">
+            <h3>Select a Profession:</h3>
+            <div class="profession-card" data-profession="plumber">
+              <i class="fas fa-tint"></i>
+              <p>Plumber</p>
+            </div>
+            <div class="profession-card" data-profession="electrician">
+              <i class="fas fa-bolt"></i>
+              <p>Electrician</p>
+            </div>
+            <div class="profession-card" data-profession="cleaner">
+              <i class="fas fa-broom"></i>
+              <p>Cleaner</p>
+            </div>
+            <div class="profession-card" data-profession="painter">
+              <i class="fas fa-paint-roller"></i>
+              <p>Painter</p>
+            </div>
+            <div class="profession-card" data-profession="carpenter">
+              <i class="fas fa-hammer"></i>
+              <p>Carpenter</p>
+            </div>
+            <div class="profession-card" data-profession="ac-technician">
+              <i class="fas fa-snowflake"></i>
+              <p>AC Technician</p>
+            </div>
+
+            <input type="hidden" id="selectedProfession" />
+
+            <label>Bio:</label>
+            <textarea id="bio"></textarea>
+
+            <label>Years of Experience:</label>
+            <input type="number" id="experience" min="0" />
+
+            <label>Minimum Charge (₹):</label>
+            <input type="number" id="charge" min="0" />
+          </div>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">
+              I agree to the
+              <a href="javascript:void(0);" onclick="showModal('termsModal')"
+                >Terms of Service</a
+              >
+              and
+              <a href="javascript:void(0);" onclick="showModal('privacyModal')"
+                >Privacy Policy</a
+              >
+            </label>
+          </div>
+
+          <button type="submit" id="register-btn">Create Account</button>
+          <p class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <div id="termsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('termsModal')">&times;</span>
+        <h2>Terms of Service</h2>
+        <ul>
+          <li>You must be 18 years or older to use this service.</li>
+          <li>
+            Do not misuse the services or try to access unauthorized data.
+          </li>
+          <li>
+            We reserve the right to suspend any account violating the terms.
+          </li>
+          <li>Payments and charges are handled by third-party services.</li>
+        </ul>
+      </div>
+    </div>
+    <div id="privacyModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+        <h2>Privacy Policy</h2>
+        <ul>
+          <li>We collect basic user data like name, email, and location.</li>
+          <li>Your data is securely stored and never sold to third parties.</li>
+          <li>We may use cookies to improve user experience.</li>
+          <li>You have the right to request data deletion anytime.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-hands-helping"></i>FindHelpers
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html">Services</a>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 FindHelpers. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const customerRadio = document.getElementById("role1");
+      const professionalRadio = document.getElementById("role2");
+      const adminRadio = document.getElementById("role3");
+      const professionSelection = document.getElementById(
+        "professionSelection"
+      );
+      const selectedProfession = document.getElementById("selectedProfession");
+      function showModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+      window.addEventListener("click", function (event) {
+        if (event.target.classList.contains("modal")) {
+          event.target.style.display = "none";
+        }
+      });
+
+      function toggleProfessionSelection() {
+        if (professionalRadio.checked) {
+          professionSelection.style.display = "block";
+        } else {
+          professionSelection.style.display = "none";
+          selectedProfession.value = "";
+          document
+            .querySelectorAll(".profession-card")
+            .forEach((c) => c.classList.remove("selected"));
+        }
+      }
+
+      customerRadio.addEventListener("change", toggleProfessionSelection);
+      professionalRadio.addEventListener("change", toggleProfessionSelection);
+      adminRadio.addEventListener("change", toggleProfessionSelection);
+
+      document.querySelectorAll(".profession-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          document
+            .querySelectorAll(".profession-card")
+            .forEach((c) => c.classList.remove("selected"));
+          card.classList.add("selected");
+          selectedProfession.value = card.getAttribute("data-profession");
+        });
+      });
+
+      const registerForm = document.getElementById("registerForm");
+      registerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const role = document.querySelector(
+          'input[name="role"]:checked'
+        )?.value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return;
+        }
+
+        if (role === "professional" && !selectedProfession.value) {
+          alert("Please select a profession.");
+          return;
+        }
+
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const fullName = `${firstName} ${lastName}`;
+
+        const userData = {
+          name: fullName,
+          email: document.getElementById("email").value.trim(),
+          password: password,
+          role: role,
+        };
+
+        try {
+          const userRes = await fetch(`http://localhost:3000/users`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData),
+          });
+
+          if (!userRes.ok) {
+            const err = await userRes.json();
+            alert(
+              "Registration failed (user data): " +
+                (err.message || "Server error.")
+            );
+            return;
+          }
+
+          const createdUser = await userRes.json();
+
+          const roleData = {
+            userId: createdUser.id,
+            firstName,
+            lastName,
+            email: userData.email,
+            phone: document.getElementById("phone").value.trim(),
+            location: document.getElementById("location").value.trim(),
+            address:document.getElementById("addres").value.trim(),
+          };
+
+          if (role === "professional") {
+            roleData.profession = selectedProfession.value;
+            roleData.bio = document.getElementById("bio").value.trim();
+            roleData.experience = document.getElementById("experience").value;
+            roleData.charge = document.getElementById("charge").value;
+          }
+
+          const roleEndpoint =
+            role === "professional"
+              ? "professionals"
+              : role === "admin"
+              ? "admins"
+              : "customers";
+
+          const roleRes = await fetch(`http://localhost:3000/${roleEndpoint}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(roleData),
+          });
+
+          if (!roleRes.ok) {
+            const err = await roleRes.json();
+            alert(
+              "Registration failed (role data): " +
+                (err.message || "Server error.")
+            );
+            return;
+          }
+
+          alert("Registration successful!");
+          registerForm.reset();
+          toggleProfessionSelection();
+        } catch (err) {
+          console.error(err);
+          alert("Registration failed: Network error or server down.");
+        }
+      });
+    </script>
+  </body>
+</html>

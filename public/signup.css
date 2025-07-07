@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.08);
+  padding: 1.5rem 5%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #636cff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+.register-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(0, 0, 0, 0.08);
+  text-align: center;
+}
+.register-title {
+  font-size: 1.8rem;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.register-subtitle {
+  color: #61686f;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+.input-group {
+  text-align: left;
+  flex: 1;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #495057;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #3a86ff;
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.15);
+}
+.input-group .error {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+.role-selection {
+  margin: 20px 0;
+}
+.role-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 1rem;
+}
+.role-option {
+  flex: 1;
+  border: 1px solid #65a2df;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 2s;
+}
+.role-option i {
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+.profession-selection {
+  display: none;
+  margin-top: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.profession-selection.active {
+  display: block;
+}
+
+.profession-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.profession-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profession-card.selected {
+  border-color: #3a86ff;
+  background-color: #f0f7ff;
+}
+
+.profession-card i {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.profession-card.selected i {
+  color: #3a86ff;
+}
+#selectedProfession {
+  margin-left: 150px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.profession-card {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.profession-card.selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1rem 0;
+  text-align: left;
+}
+.terms input {
+  margin-top: 7px;
+  accent-color: #3a86ff;
+}
+.terms label {
+  font-size: 0.9rem;
+  color: #495057;
+}
+.terms a {
+  color: #3a86ff;
+  text-decoration: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #1f2327;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #888;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+#register-btn {
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#register-btn:hover {
+  background: #2667d6;
+  transform: translateY(-3px);
+}
+.login-link {
+  color: #495057;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.login-link a {
+  color: #3a86ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-link a:hover {
+  color: #9c9cf1;
+}
+footer {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px;
+}
+.footer-links a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.social-icons a {
+  color: #adb5bd;
+}
+.social-icons a:hover {
+  color: white;
+  font-size: 25px;
+}
+.copyright {
+  font-size: 15px;
+  color: #6c757d;
+}
+@media (max-width: 576px) {
+  .register-container {
+    padding: 2rem 1.5rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .role-options {
+    flex-direction: column;
+  }
+}
+#professionSelection {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+#professionSelection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.profession-card {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 10px 20px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #444;
+}
+
+.profession-card:hover {
+  background-color: #e0f0ff;
+  border-color: #1e90ff;
+  color: #1e90ff;
+}
+
+.profession-card.selected {
+  background-color: #1e90ff;
+  color: white;
+  border-color: #1e90ff;
+}
+
+#professionSelection label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+#professionSelection input[type="number"],
+#professionSelection textarea,
+#professionSelection input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#professionSelection textarea {
+  resize: vertical;
+  min-height: 80px;
+}

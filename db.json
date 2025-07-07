@@ -1,0 +1,544 @@
+{
+  "users": [
+    {
+      "id": "5e96",
+      "name": "Umaiza Bhanu",
+      "email": "shaikumaiza@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "50a0",
+      "name": "Shaik Daniya",
+      "email": "shaikdaniya@gmail.com",
+      "password": "password123",
+      "role": "professional"
+    },
+    {
+      "id": "348e",
+      "name": "Poosarla Durga Bhavani",
+      "email": "durgabhavani@gmail.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": "0caf",
+      "name": "Tanuja Poosarla",
+      "email": "tanujapoosarla@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee3",
+      "name": "Pittu Bhavani",
+      "email": "pittubhavani@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "431c",
+      "name": "Shanker Kotamasu",
+      "email": "shanker@gamil.com",
+      "password": "password123",
+      "role": "professional"
+    },
+    {
+      "id": "5491",
+      "name": "Chandu sharma",
+      "email": "sharma123@gmail.com",
+      "password": "password123",
+      "role": "professional"
+    },
+    {
+      "id": "u101",
+      "name": "Ramesh Yadav",
+      "email": "ramesh.yadav@example.com",
+      "password": "ramesh@123",
+      "role": "professional"
+    },
+    {
+      "id": "u102",
+      "name": "Anjali Mehra",
+      "email": "anjali.mehra@example.com",
+      "password": "anjali@123",
+      "role": "professional"
+    },
+    {
+      "id": "u103",
+      "name": "Suresh Kumar",
+      "email": "suresh.kumar@example.com",
+      "password": "suresh@123",
+      "role": "professional"
+    },
+    {
+      "id": "u104",
+      "name": "Lalita Sharma",
+      "email": "lalita.sharma@example.com",
+      "password": "lalita@123",
+      "role": "professional"
+    },
+    {
+      "id": "u105",
+      "name": "Imran Khan",
+      "email": "imran.khan@example.com",
+      "password": "imran@123",
+      "role": "professional"
+    },
+    {
+      "id": "u106",
+      "name": "Deepa Verma",
+      "email": "deepa.verma@example.com",
+      "password": "deepa@123",
+      "role": "professional"
+    },
+    {
+      "id": "u107",
+      "name": "Raj Thakur",
+      "email": "raj.thakur@example.com",
+      "password": "raj@123",
+      "role": "professional"
+    },
+    {
+      "id": "u108",
+      "name": "Seema Jain",
+      "email": "seema.jain@example.com",
+      "password": "seema@123",
+      "role": "professional"
+    },
+    {
+      "id": "u109",
+      "name": "Amit Naik",
+      "email": "amit.naik@example.com",
+      "password": "amit@123",
+      "role": "professional"
+    },
+    {
+      "id": "u110",
+      "name": "Rekha Deshmukh",
+      "email": "rekha.deshmukh@example.com",
+      "password": "rekha@123",
+      "role": "professional"
+    },
+    {
+      "id": "4ee4",
+      "name": "Aman Verma",
+      "email": "aman.verma@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee5",
+      "name": "Sneha Rao",
+      "email": "sneha.rao@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee6",
+      "name": "Ravi Kiran",
+      "email": "ravikiran@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee7",
+      "name": "Anita Sharma",
+      "email": "anita.sharma@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee8",
+      "name": "Manoj Patil",
+      "email": "manoj.patil@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee9",
+      "name": "Divya Menon",
+      "email": "divya.menon@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee10",
+      "name": "Vikram Singh",
+      "email": "vikram.singh@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee11",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "4ee12",
+      "name": "Ajay Raj",
+      "email": "ajay.raj@gmail.com",
+      "password": "password123",
+      "role": "customer"
+    }
+  ],
+  "professionals": [
+    {
+      "id": "5fd4",
+      "userId": "50a0",
+      "firstName": "Shaik",
+      "lastName": "Daniya",
+      "email": "shaikdaniya@gmail.com",
+      "phone": "7418529633",
+      "location": "mumbai",
+      "address": "new nager",
+      "profession": "AC Technician",
+      "bio": "I am experienced Ac technician.",
+      "experience": "4",
+      "charge": "1000",
+      "approved": true
+    },
+    {
+      "id": "ad3d",
+      "userId": "431c",
+      "firstName": "Shanker",
+      "lastName": "Kotamasu",
+      "email": "shanker@gamil.com",
+      "phone": "9654782311",
+      "location": "Kerala",
+      "address": "vayumvur",
+      "profession": "carpenter",
+      "bio": "Expert and experience of 5years in carpentery field",
+      "experience": "3",
+      "charge": "7000"
+    },
+    {
+      "id": "9285",
+      "userId": "5491",
+      "firstName": "Chandu",
+      "lastName": "sharma",
+      "email": "sharma123@gmail.com",
+      "phone": "7894562587",
+      "location": "Kerala",
+      "address": "Nelam colony",
+      "profession": "painter",
+      "bio": "A painter specializes in applying paint, stain, and coatings to walls, ceilings, and other surfaces to enhance aesthetics and protect structures.",
+      "experience": "2",
+      "charge": "9000"
+    },
+    {
+      "id": "1a01",
+      "userId": "u101",
+      "firstName": "Ramesh",
+      "lastName": "Yadav",
+      "email": "ramesh.yadav@example.com",
+      "phone": "9123456780",
+      "location": "Lucknow",
+      "address": "Sector 5, Gomti Nagar",
+      "profession": "Plumber",
+      "bio": "Experienced plumber with expertise in pipe fittings and bathroom installation.",
+      "experience": "6",
+      "charge": "800",
+      "approved": true
+    },
+    {
+      "id": "1a02",
+      "userId": "u102",
+      "firstName": "Anjali",
+      "lastName": "Mehra",
+      "email": "anjali.mehra@example.com",
+      "phone": "9876543210",
+      "location": "Delhi",
+      "address": "Dwarka Sector 12",
+      "profession": "Cleaner",
+      "bio": "Reliable cleaner skilled in deep cleaning and housekeeping services.",
+      "experience": "3",
+      "charge": "500",
+      "approved": true
+    },
+    {
+      "id": "1a03",
+      "userId": "u103",
+      "firstName": "Suresh",
+      "lastName": "Kumar",
+      "email": "suresh.kumar@example.com",
+      "phone": "9988776655",
+      "location": "Chennai",
+      "address": "Velachery Main Road",
+      "profession": "Electrician",
+      "bio": "Certified electrician specializing in residential and commercial wiring.",
+      "experience": "7",
+      "charge": "1000",
+      "approved": true
+    },
+    {
+      "id": "1a04",
+      "userId": "u104",
+      "firstName": "Lalita",
+      "lastName": "Sharma",
+      "email": "lalita.sharma@example.com",
+      "phone": "9090909090",
+      "location": "Bhopal",
+      "address": "Indrapuri",
+      "profession": "Painter",
+      "bio": "Professional painter skilled in interior and exterior painting projects.",
+      "experience": "5",
+      "charge": "700",
+      "approved": true
+    },
+    {
+      "id": "1a05",
+      "userId": "u105",
+      "firstName": "Imran",
+      "lastName": "Khan",
+      "email": "imran.khan@example.com",
+      "phone": "9012345678",
+      "location": "Hyderabad",
+      "address": "Charminar Area",
+      "profession": "Carpenter",
+      "bio": "Experienced carpenter specializing in custom furniture and repairs.",
+      "experience": "9",
+      "charge": "1200",
+      "approved": true
+    },
+    {
+      "id": "1a06",
+      "userId": "u106",
+      "firstName": "Deepa",
+      "lastName": "Verma",
+      "email": "deepa.verma@example.com",
+      "phone": "8899776655",
+      "location": "Ahmedabad",
+      "address": "Satellite",
+      "profession": "Cleaner",
+      "bio": "Efficient cleaner offering professional housekeeping services.",
+      "experience": "4",
+      "charge": "600",
+      "approved": true
+    },
+    {
+      "id": "1a07",
+      "userId": "u107",
+      "firstName": "Raj",
+      "lastName": "Thakur",
+      "email": "raj.thakur@example.com",
+      "phone": "9876501234",
+      "location": "Bangalore",
+      "address": "BTM Layout",
+      "profession": "AC Technician",
+      "bio": "Trained AC technician for all major brands and types of air conditioners.",
+      "experience": "5",
+      "charge": "1100",
+      "approved": true
+    },
+    {
+      "id": "1a08",
+      "userId": "u108",
+      "firstName": "Seema",
+      "lastName": "Jain",
+      "email": "seema.jain@example.com",
+      "phone": "9812345670",
+      "location": "Kolkata",
+      "address": "Salt Lake City",
+      "profession": "Painter",
+      "bio": "Creative painter with attention to detail in both homes and offices.",
+      "experience": "6",
+      "charge": "900",
+      "approved": true
+    },
+    {
+      "id": "1a09",
+      "userId": "u109",
+      "firstName": "Amit",
+      "lastName": "Naik",
+      "email": "amit.naik@example.com",
+      "phone": "9100112233",
+      "location": "Pune",
+      "address": "Kothrud",
+      "profession": "Electrician",
+      "bio": "Reliable electrician with quick service and installation expertise.",
+      "experience": "4",
+      "charge": "850",
+      "approved": true
+    },
+    {
+      "id": "1a10",
+      "userId": "u110",
+      "firstName": "Rekha",
+      "lastName": "Deshmukh",
+      "email": "rekha.deshmukh@example.com",
+      "phone": "9223344556",
+      "location": "Jaipur",
+      "address": "Malviya Nagar",
+      "profession": "Plumber",
+      "bio": "Skilled plumber for bathroom fittings and kitchen plumbing.",
+      "experience": "5",
+      "charge": "750",
+      "approved": true
+    }
+  ],
+  "customers": [
+    {
+      "id": "c655",
+      "userId": "5e96",
+      "firstName": "Umaiza",
+      "lastName": "Bhanu",
+      "email": "shaikumaiza@gmail.com",
+      "phone": "9638527412",
+      "location": "mumbai",
+      "address": "new chowk"
+    },
+    {
+      "id": "e2ff",
+      "userId": "0caf",
+      "firstName": "Tanuja",
+      "lastName": "Poosarla",
+      "email": "tanujapoosarla@gmail.com",
+      "phone": "9985456224",
+      "location": "Kerala",
+      "address": "vayumvur"
+    },
+    {
+      "id": "8fc6",
+      "userId": "4ee3",
+      "firstName": "Pittu",
+      "lastName": "Bhavani",
+      "email": "pittubhavani@gmail.com",
+      "phone": "7894561233",
+      "location": "Kerala",
+      "address": "maha colony"
+    },
+    {
+      "id": "8fc7",
+      "userId": "4ee4",
+      "firstName": "Aman",
+      "lastName": "Verma",
+      "email": "aman.verma@gmail.com",
+      "phone": "9876543211",
+      "location": "Delhi",
+      "address": "Rohini Sector 8"
+    },
+    {
+      "id": "8fc8",
+      "userId": "4ee5",
+      "firstName": "Sneha",
+      "lastName": "Rao",
+      "email": "sneha.rao@gmail.com",
+      "phone": "8765432109",
+      "location": "Hyderabad",
+      "address": "Kukatpally"
+    },
+    {
+      "id": "8fc9",
+      "userId": "4ee6",
+      "firstName": "Ravi",
+      "lastName": "Kiran",
+      "email": "ravikiran@gmail.com",
+      "phone": "7654321098",
+      "location": "Chennai",
+      "address": "T. Nagar"
+    },
+    {
+      "id": "8fca",
+      "userId": "4ee7",
+      "firstName": "Anita",
+      "lastName": "Sharma",
+      "email": "anita.sharma@gmail.com",
+      "phone": "6543210987",
+      "location": "Jaipur",
+      "address": "Vaishali Nagar"
+    },
+    {
+      "id": "8fcb",
+      "userId": "4ee8",
+      "firstName": "Manoj",
+      "lastName": "Patil",
+      "email": "manoj.patil@gmail.com",
+      "phone": "9123456789",
+      "location": "Mumbai",
+      "address": "Andheri East"
+    },
+    {
+      "id": "8fcc",
+      "userId": "4ee9",
+      "firstName": "Divya",
+      "lastName": "Menon",
+      "email": "divya.menon@gmail.com",
+      "phone": "8234567890",
+      "location": "Bangalore",
+      "address": "Whitefield"
+    },
+    {
+      "id": "8fcd",
+      "userId": "4ee10",
+      "firstName": "Vikram",
+      "lastName": "Singh",
+      "email": "vikram.singh@gmail.com",
+      "phone": "9988776655",
+      "location": "Bhopal",
+      "address": "MP Nagar"
+    },
+    {
+      "id": "8fce",
+      "userId": "4ee11",
+      "firstName": "Neha",
+      "lastName": "Gupta",
+      "email": "neha.gupta@gmail.com",
+      "phone": "9090909090",
+      "location": "Lucknow",
+      "address": "Hazratganj"
+    },
+    {
+      "id": "8fcf",
+      "userId": "4ee12",
+      "firstName": "Ajay",
+      "lastName": "Raj",
+      "email": "ajay.raj@gmail.com",
+      "phone": "9012345678",
+      "location": "Kolkata",
+      "address": "New Town"
+    }
+  ],
+  "admins": [
+    {
+      "id": "f8de",
+      "userId": "348e",
+      "firstName": "Poosarla",
+      "lastName": "Durga Bhavani",
+      "email": "durgabhavani@gmail.com",
+      "phone": "9392234482",
+      "location": "delhi",
+      "address": "center road colony"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "8869",
+      "professionalId": "5fd4",
+      "customerName": "Umaiza Bhanu",
+      "customerEmail": "shaikumaiza@gmail.com",
+      "customerPhone": "9638527411",
+      "serviceDate": "2025-06-29",
+      "serviceTime": "15:39",
+      "serviceAddress": "Mumbai,urban street",
+      "additionalNotes": "",
+      "bookingDate": "2025-06-30T09:09:15.796Z",
+      "status": "completed",
+      "review": "3"
+    },
+    {
+      "id": "f3ca",
+      "professionalId": "1a10",
+      "customerName": "Amita Sharma",
+      "customerEmail": "anita.sharma@gmail.com",
+      "customerPhone": "6543210987",
+      "serviceDate": "2025-06-29",
+      "serviceTime": "09:00",
+      "serviceAddress": "Jaipur ,Malviya Nager",
+      "additionalNotes": "",
+      "bookingDate": "2025-06-30T16:52:52.166Z",
+      "status": "pending"
+    }
+  ]
+}

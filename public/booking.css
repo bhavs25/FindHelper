@@ -1,0 +1,166 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #f5f5f5;
+
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2667d6;
+}
+
+.nav-links a {
+ color: #eee5e5;
+  text-decoration: none;
+  background-color: #5950ff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #2667d6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1453c1;
+}
+
+.professional-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.professional-info h2 {
+  margin-top: 0;
+  color: #2667d6;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+footer {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px;
+}
+.footer-links a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.social-icons a {
+  color: #adb5bd;
+}
+.social-icons a:hover {
+  color: white;
+  font-size: 25px;
+}
+.copyright {
+  font-size: 15px;
+  color: #6c757d;
+}

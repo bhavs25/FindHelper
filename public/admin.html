@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - FindHelpers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo"><i class="fas fa-hands-helping"></i> FindHelpers</div>
+        <nav class="nav-links">
+          <a href="#" onclick="logout()" class="logout">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 id="welcomeHeading">Welcome Back</h1>
+      <div class="summary-cards">
+        <div class="card" id="proCount">
+          <i class="fas fa-user-tie card-icon"></i>
+          <h3>Professionals</h3>
+          <p id="professionalsCount">0</p>
+        </div>
+        <div class="card" id="custCount">
+          <i class="fas fa-users card-icon"></i>
+          <h3>Customers</h3>
+          <p id="customersCount">0</p>
+        </div>
+        <div class="card" id="bookCount">
+          <i class="fas fa-calendar-check card-icon"></i>
+          <h3>Bookings</h3>
+          <p id="bookingsCount">0</p>
+        </div>
+      </div>
+      <div class="tab-buttons">
+        <button onclick="showTab('professionals')" class="active">
+          <i class="fas fa-user-tie"></i> Professionals
+        </button>
+        <button onclick="showTab('customers')">
+          <i class="fas fa-users"></i> Customers
+        </button>
+        <button onclick="showTab('bookings')">
+          <i class="fas fa-calendar-check"></i> Bookings
+        </button>
+      </div>
+
+      <div id="professionals" class="tab-section">
+        <h2><i class="fas fa-user-tie"></i> Professionals Management</h2>
+
+        <table id="professionalsTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user icon"></i> Name</th>
+              <th><i class="fas fa-envelope icon"></i> Email</th>
+              <th><i class="fas fa-briefcase icon"></i> Profession</th>
+              <th><i class="fas fa-map-marker-alt icon"></i> Location</th>
+              <th><i class="fas fa-info-circle icon"></i> Status</th>
+              <th><i class="fas fa-cog icon"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="customers" class="tab-section" style="display: none">
+        <h2><i class="fas fa-users"></i> Customers Management</h2>
+        <table id="customersTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user icon"></i> Name</th>
+              <th><i class="fas fa-envelope icon"></i> Email</th>
+              <th><i class="fas fa-phone icon"></i> Phone</th>
+              <th><i class="fas fa-map-marker-alt icon"></i> Location</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="bookings" class="tab-section" style="display: none">
+        <h2><i class="fas fa-calendar-check"></i> All Bookings</h2>
+        <table id="bookingsTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user icon"></i> Customer</th>
+              <th><i class="fas fa-user-tie icon"></i> Professional</th>
+              <th><i class="fas fa-tools icon"></i> Service</th>
+              <th><i class="fas fa-clock icon"></i> Schedule</th>
+              <th><i class="fas fa-home icon"></i> Address</th>
+              <th><i class="fas fa-info-circle icon"></i> Status</th>
+              <th><i class="fas fa-star icon"></i> Reviews</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-hands-helping"></i>FindHelpers
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home Page</a>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 FindHelpers. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user && user.role === "admin") {
+          const heading = document.getElementById("welcomeHeading");
+          heading.textContent = `Welcome Back, ${user.name.toUpperCase()}`;
+        }
+      });
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (!user || user.role !== "admin") {
+        alert("Access denied. Admins only.");
+        location.replace("login.html");
+      }
+
+      function logout() {
+        localStorage.removeItem("user");
+        location.href = "login.html";
+      }
+
+      function showTab(tabId) {
+        document
+          .querySelectorAll(".tab-section")
+          .forEach((tab) => (tab.style.display = "none"));
+        document
+          .querySelectorAll(".tab-buttons button")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.getElementById(tabId).style.display = "block";
+        event.target.classList.add("active");
+      }
+      function loadProfessionals() {
+        fetch("http://localhost:3000/professionals")
+          .then((res) => res.json())
+          .then((data) => {
+            const tbody = document.querySelector("#professionalsTable tbody");
+            tbody.innerHTML = "";
+            data.forEach((pro) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+          <td>${pro.firstName} ${pro.lastName}</td>
+          <td>${pro.email}</td>
+          <td>${pro.profession}</td>
+          <td>${pro.location}</td>
+          <td class="${pro.approved ? "status-approved" : "status-pending"}">
+            <i class="fas ${pro.approved ? "fa-check-circle" : "fa-clock"}"></i>
+            ${pro.approved ? "Approved" : "Pending"}
+          </td>
+          <td>
+            <button class="approve-btn" onclick="approvePro('${pro.id}')">
+              <i class="fas fa-check"></i> Approve
+            </button>
+            <button class="delete-btn" onclick="deletePro('${pro.id}')">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </td>`;
+              tbody.appendChild(tr);
+            });
+
+            document.getElementById("professionalsCount").textContent =
+              data.length;
+          })
+          .catch((error) =>
+            console.error("Error loading professionals:", error)
+          );
+      }
+      function loadCustomers() {
+        fetch("http://localhost:3000/customers")
+          .then((res) => res.json())
+          .then((data) => {
+            const tbody = document.querySelector("#customersTable tbody");
+            tbody.innerHTML = "";
+            data.forEach((cust) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+          <td>${cust.firstName} ${cust.lastName}</td>
+          <td>${cust.email}</td>
+          <td>${cust.phone}</td>
+          <td>${cust.location}</td>`;
+              tbody.appendChild(tr);
+            });
+
+            document.getElementById("customersCount").textContent = data.length;
+          })
+          .catch((error) => console.error("Error loading customers:", error));
+      }
+
+      function loadBookings() {
+        Promise.all([
+          fetch("http://localhost:3000/bookings").then((res) => res.json()),
+          fetch("http://localhost:3000/professionals").then((res) =>
+            res.json()
+          ),
+        ])
+          .then(([bookings, professionals]) => {
+            const tbody = document.querySelector("#bookingsTable tbody");
+            tbody.innerHTML = "";
+
+            bookings.forEach((book) => {
+              const professional = professionals.find(
+                (p) => p.id === book.professionalId
+              );
+              const profName = professional
+                ? `${professional.firstName} ${professional.lastName}`
+                : "N/A";
+              const profProfession = professional
+                ? professional.profession
+                : "N/A";
+
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+        <td>${book.customerName}</td>
+        <td>${profName}</td>
+        <td>${profProfession}</td>
+        <td>${book.serviceDate} ${book.serviceTime}</td>
+        <td>${book.serviceAddress.replace(/\n/g, ", ")}</td>
+        <td>${book.status}</td>
+        <td>${book.review ? book.review : "-"}</td>
+      `;
+              tbody.appendChild(tr);
+            });
+
+            document.getElementById("bookingsCount").textContent =
+              bookings.length;
+          })
+          .catch((error) => console.error("Error loading bookings:", error));
+      }
+      function approvePro(id) {
+        fetch(`http://localhost:3000/professionals/${id}`)
+          .then((res) => res.json())
+          .then((professional) => {
+            if (professional.approved) {
+              alert("This professional is already approved.");
+            } else {
+              if (
+                confirm("Are you sure you want to approve this professional?")
+              ) {
+                fetch(`http://localhost:3000/professionals/${id}`, {
+                  method: "PATCH",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ approved: true }),
+                })
+                  .then(() => {
+                    loadProfessionals();
+                    loadBookings();
+                  })
+                  .catch((error) =>
+                    console.error("Error approving professional:", error)
+                  );
+              }
+            }
+          })
+          .catch((error) =>
+            console.error("Error fetching professional details:", error)
+          );
+      }
+
+      function deletePro(id) {
+        if (
+          confirm(
+            "Are you sure you want to delete this professional? This action cannot be undone."
+          )
+        ) {
+          fetch(`http://localhost:3000/professionals/${id}`, {
+            method: "DELETE",
+          })
+            .then(() => {
+              loadProfessionals();
+              loadBookings();
+            })
+            .catch((error) =>
+              console.error("Error deleting professional:", error)
+            );
+        }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        loadProfessionals();
+        loadCustomers();
+        loadBookings();
+      });
+    </script>
+  </body>
+</html>
