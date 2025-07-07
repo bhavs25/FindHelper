@@ -53,4 +53,5 @@ FindHelper improves **user trust** and enhances **professional visibility** in l
 
 ---
 
-> 🔗 Deployed at: https://find-helper.onrender.com *(Replace with your actual deployed URL if different)*
+> 🔗 Deployed at: https://find-helpers.onrender.com
+
