@@ -1,26 +1,46 @@
-###### **Project Overview**
+📌 Project Overview
+FindHelper is a full-stack web platform designed to connect users with skilled professionals such as plumbers, electricians, painters, cleaners, carpenters, and AC technicians across various cities in India.
 
-	This project is a Find Helper Booking Platform that connects users with skilled professionals such as plumbers, electricians, cleaners, painters, carpenters, and AC technicians across various cities in India.
+The platform streamlines the process of searching, verifying, and booking trusted service providers through a user-friendly interface and structured approval system.
 
-**The platform allows:**
+✅ Core Features
+User Registration & Login
+Separate authentication for customers, professionals, and admins.
 
-1. Users to search for professionals based on location and service category.
-2. Professionals to register themselves, list their services, charges, experience, and location.
-3. Admins to approve or reject professional profiles before they are shown to the public.
+Professional Onboarding
+Skilled workers can register and create profiles including:
 
-It aims to streamline the process of finding and hiring trusted service providers with transparent pricing, verified credentials, and user-friendly browsing.
+Services offered
 
-###### **Features Implemented**
+Charges
 
-* User registration and login for customers and professionals
-* Professional profile creation and storage
-* Role-based access (customer, professional, admin)
-* Service browsing by profession and location
-* Professional bio, charge, and experience display
-* Approval system for professional accounts
-* 
-**###### Pending Features**
+Experience
 
-* Chat functionality between users and professionals
-* Payment integration
-* Notification system (email/SMS)
+City/location
+
+Admin Dashboard
+
+Approves or rejects professional profiles
+
+Ensures only verified professionals are listed
+
+Service Discovery
+
+Users can browse professionals by service category and location
+
+View bio, charges, and experience of each provider
+
+Role-Based Access Control
+Tailored views and permissions for different user roles
+
+Technology Stack
+Frontend: HTML5, CSS3, JavaScript (ES6)
+
+Backend: JSON Server (mock API)
+
+Icons: Font Awesome
+
+Font: Segoe UI system font
+
+🎯 Purpose & Impact
+This project addresses a real-world problem in India: trustworthy access to skilled home services. By combining location-based search, admin-level verification, and transparent profiles, the platform enhances both user trust and professional visibility.
